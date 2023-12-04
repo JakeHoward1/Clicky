@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://benatini8wq88"]
+
+[ext_resource type="FontFile" uid="uid://bedngvvcbjxbg" path="res://assets/fonts/VinaSans-Regular.ttf" id="1_5f76b"]
+[ext_resource type="Script" path="res://scenes/UI/counter.gd" id="1_yjxl4"]
+
+[node name="Counter" type="Label"]
+anchors_preset = -1
+anchor_right = 0.457
+anchor_bottom = 0.389
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 162.536
+offset_bottom = 29.928
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_5f76b")
+theme_override_font_sizes/font_size = 50
+script = ExtResource("1_yjxl4")

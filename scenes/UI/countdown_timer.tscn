@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6qhiwuepd54y"]
+
+[ext_resource type="FontFile" uid="uid://bedngvvcbjxbg" path="res://assets/fonts/VinaSans-Regular.ttf" id="1_f7vi1"]
+[ext_resource type="Script" path="res://scenes/UI/countdown_timer.gd" id="2_nbt7j"]
+
+[node name="CountdownTimer" type="Label"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.458
+offset_left = -2.0
+offset_top = 4.0
+offset_right = 1.0
+offset_bottom = 4.21598
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_f7vi1")
+theme_override_font_sizes/font_size = 50
+text = "60"
+horizontal_alignment = 2
+script = ExtResource("2_nbt7j")
+
+[node name="MinuteTimer" type="Timer" parent="."]
+wait_time = 90.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="MinuteTimer" to="." method="_on_minute_timer_timeout"]

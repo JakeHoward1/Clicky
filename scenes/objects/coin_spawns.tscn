@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bsmkt02gupc8a"]
+
+[node name="CoinSpawns" type="Node2D"]
+
+[node name="spawn1" type="Marker2D" parent="."]
+position = Vector2(1010, 724)
+
+[node name="spawn2" type="Marker2D" parent="."]
+position = Vector2(750, 708)
+
+[node name="spawn3" type="Marker2D" parent="."]
+position = Vector2(418, 714)
+
+[node name="spawn4" type="Marker2D" parent="."]
+position = Vector2(132, 704)

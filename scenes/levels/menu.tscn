@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://x8jdu8lwhck1"]
+
+[ext_resource type="Texture2D" uid="uid://bad8ipcmkf1dc" path="res://assets/Free-Sky-with-Clouds-Background-Pixel-Art3.jpg" id="1_0eacl"]
+[ext_resource type="Script" path="res://scenes/levels/menu.gd" id="1_dwv3w"]
+[ext_resource type="FontFile" uid="uid://bedngvvcbjxbg" path="res://assets/fonts/VinaSans-Regular.ttf" id="2_7xoxp"]
+[ext_resource type="Texture2D" uid="uid://xd4rpov6lb7f" path="res://assets/gameButton.png" id="3_tf3s0"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_dwv3w")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(592, 318)
+scale = Vector2(0.745833, 0.739167)
+texture = ExtResource("1_0eacl")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 478.0
+offset_top = 365.0
+offset_right = 679.0
+offset_bottom = 526.0
+texture_normal = ExtResource("3_tf3s0")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 29.0
+offset_right = 129.0
+offset_bottom = 79.0
+theme_override_colors/font_color = Color(0, 0.635294, 0.952941, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.733333, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_7xoxp")
+theme_override_font_sizes/font_size = 38
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = -14.0
+offset_top = 78.0
+offset_right = 1179.0
+offset_bottom = 412.0
+theme_override_colors/font_color = Color(0.290196, 0.823529, 0.807843, 1)
+theme_override_colors/font_outline_color = Color(0.192157, 0.113725, 0.654902, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_7xoxp")
+theme_override_font_sizes/font_size = 140
+text = "Clicky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
